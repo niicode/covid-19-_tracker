@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import {
@@ -14,6 +13,7 @@ import Table from "./Table";
 import { sortData, prettyPrintStat } from "./util";
 import numeral from "numeral";
 import Map from "./Map";
+import Footer from "./Footer";
 import "leaflet/dist/leaflet.css";
 
 function App() {
@@ -53,7 +53,7 @@ function App() {
     getCountriesData();
   }, []);
 
-  console.log(casesType);
+  // console.log(casesType);
 
   const onCountryChange = async (e) => {
     const countryCode = e.target.value;
@@ -136,6 +136,41 @@ function App() {
         </CardContent>
       </Card>
       {/* Graph */}
+      {/* <Footer/> */}
+      <div class="social-icons">
+        <a
+          class="social-icon-link facebook"
+          href="/"
+          target="_blank"
+          aria-label="Facebook"
+        >
+          <i class="fab fa-facebook-f" />
+        </a>
+        <a
+          class="social-icon-link instagram"
+          href="/"
+          target="_blank"
+          aria-label="Instagram"
+        >
+          <i class="fab fa-instagram" />
+        </a>
+        <a
+          class="social-icon-link youtube"
+          href="/"
+          target="_blank"
+          aria-label="Youtube"
+        >
+          <i class="fab fa-youtube" />
+        </a>
+        <a
+          class="social-icon-link twitter"
+          href="/"
+          target="_blank"
+          aria-label="Twitter"
+        >
+          <i class="fab fa-twitter" />
+        </a>
+      </div>
     </div>
   );
 }
